@@ -20,6 +20,13 @@ class ListingInput extends Component {
     handleOnSubmit = event => {
         event.preventDefault()
         this.props.addListing(this.state)
+        this.setState({
+            kind: '',
+            bedrooms: '',
+            bathrooms: '',
+            location: '',
+            price: ''
+        })
     }
 
     render() {
