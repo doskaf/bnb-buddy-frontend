@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Listing extends Component {
+const Listing = (props) => {
 
-    render() {
-        return (
-            <div className="listing">
-                <h3>{this.props.listing.kind}</h3>
-                <p>{this.props.listing.bedrooms} bed - {this.props.listing.bathrooms} bath</p>
-                <h4>${this.props.listing.price}/night</h4>
-            </div>
-        )
-    }
+    let listing = props.listings[props.match.params.id - 1]
+
+    return (
+        <div className="listing">
+            <h3>{listing ? listing.kind : null}</h3>
+            <p>{listing ? listing.bedrooms : null} bed - {listing ? listing.bathrooms : null} bath</p>
+            <h4>${listing ? listing.price : null}/night</h4>
+        </div>
+    )
 }
 
 export default Listing
