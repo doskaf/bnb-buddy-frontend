@@ -1,0 +1,2 @@
+- Change the way variable "listing" is set in Listing.js
+- Add Navbar
