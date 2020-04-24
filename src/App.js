@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
+import ListingsContainer from './containers/ListingsContainer';
 
-export default class App extends Component {
-  componentDidMount() {
-    fetch('http://localhost:3000/listings')
-    .then(response => response.json())
-    .then(resObj => console.log(resObj))
-  }
+class App extends Component {
 
   render() {
     return (
       <div className="App">
-        App
+        <ListingsContainer />
       </div>
     );
   }
 }
+
+export default App;
