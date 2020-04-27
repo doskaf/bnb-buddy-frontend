@@ -4,7 +4,7 @@ import {addListing} from '../actions/addListing';
 
 class ListingInput extends Component {
     state = {
-        kind: '',
+        kind: 'Bedroom',
         bedrooms: '',
         bathrooms: '',
         location: '',
@@ -21,7 +21,7 @@ class ListingInput extends Component {
         event.preventDefault()
         this.props.addListing(this.state)
         this.setState({
-            kind: '',
+            kind: 'Bedroom',
             bedrooms: '',
             bathrooms: '',
             location: '',

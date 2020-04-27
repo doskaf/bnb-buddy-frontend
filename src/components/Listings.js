@@ -13,12 +13,14 @@ const Listings = (props) => {
 
     return (
         <div>
-            <ul>
-                {props.listings.map(listing => 
-                <li key={listing.id}>
-                    {renderLink(listing)}
-                </li>)}
-            </ul>
+            {props.listings.loading ? <p>Loading Listings...</p> : 
+                <ul>
+                    {props.listings.map(listing => 
+                    <li key={listing.id}>
+                        {renderLink(listing)}
+                    </li>)}
+                </ul>
+            }
         </div>
     )
 }

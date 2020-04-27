@@ -5,6 +5,7 @@ import BookingsContainer from '../containers/BookingsContainer';
 const Listing = (props) => {
 
     let listing = props.listings[props.match.params.id - 1]
+    // let listing = props.listings.filter(listing => listing.id === props.match.params.id)[0]
 
     return (
         <div className="listing">

@@ -11,7 +11,7 @@ class ListingsContainer extends Component {
     componentDidMount() {
         this.props.fetchListings()
     }
-
+    
     render() {
         return (
             <div>

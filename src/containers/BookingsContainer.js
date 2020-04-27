@@ -6,7 +6,7 @@ class BookingsContainer extends Component {
     render() {
         return (
             <div>
-                <BookingInput />
+                <BookingInput listing={this.props.listing} />
                 <Bookings bookings={this.props.listing && this.props.listing.bookings} />
             </div>
         )
