@@ -1,2 +1,3 @@
-- Change the way variable "listing" is set in Listing.js
+- Add Homepage
 - Add Navbar
+- Styling

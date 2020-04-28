@@ -9,6 +9,12 @@ export function addListing(data) {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(listing => dispatch({type: 'ADD_LISTING', payload: listing}))
+        .then(listing => {
+            if (listing.error) {
+                alert(listing.error)
+            } else {
+                dispatch({type: 'ADD_LISTING', payload: listing})
+            }
+        })
     }
 }
