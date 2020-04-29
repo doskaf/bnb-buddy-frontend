@@ -1,3 +1,0 @@
-- Add Homepage
-- Add Navbar
-- Styling

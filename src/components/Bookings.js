@@ -10,6 +10,7 @@ const Bookings = (props) => {
 
     return (
         <div>
+            <b>Bookings for this Listing:</b>
             {props.bookings && props.bookings.map(booking => 
                 <li key={booking.id}>{booking.guest}: {booking.check_in} {booking.check_out} <button onClick={() => handleDelete(booking)}>Delete</button></li>)}
         </div>

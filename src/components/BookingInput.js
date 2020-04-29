@@ -16,7 +16,7 @@ class BookingInput extends Component {
     }
 
     handleOnSubmit = event => {
-        event.preventDefault()
+        event.preventDefault();
         this.props.addBooking({
             guest: this.state.guest,
             check_in: this.state.checkIn,
@@ -32,7 +32,7 @@ class BookingInput extends Component {
     render() {
         return (
             <div>
-                <h3>Book this Listing</h3>
+                <b>Book this Listing</b>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Guest Name:</label>
                     <input type='text' name='guest' value={this.state.guest} onChange={this.handleOnChange} /><br />

@@ -10,9 +10,10 @@ const Listing = (props) => {
     return (
         <div className="listing">
             {listing ? null : <Redirect to='/listings' />}
-            <h3>{listing ? listing.kind : null}</h3>
+            <h2>{listing ? listing.kind : null}</h2>
             <p>{listing ? listing.bedrooms : null} bed - {listing ? listing.bathrooms : null} bath</p>
-            <h4>${listing ? listing.price : null}/night</h4>
+            <p>{listing ? listing.location : null}</p>
+            <h4>${listing ? listing.price : null}/night</h4><br />
             <BookingsContainer listing={listing} />
         </div>
     )
