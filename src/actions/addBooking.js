@@ -9,12 +9,13 @@ export function addBooking(booking, listingId) {
             body: JSON.stringify(booking)
         })
         .then(response => response.json())
-        .then(listing => {
-            if (listing.error) {
-                alert(listing.error)
+        .then(booking => {
+            if (booking.error) {
+                alert(booking.error)
             } else {
-                dispatch({type: 'ADD_BOOKING', payload: listing})
+                dispatch({type: 'ADD_BOOKING', payload: booking})
             }
         })
+        // .then(resObj => console.log(resObj))
     }
 }
