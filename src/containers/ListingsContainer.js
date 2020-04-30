@@ -31,7 +31,7 @@ class ListingsContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        listings: state.listingReducer
+        listings: state.listings
     }
 }
 

@@ -1,4 +1,4 @@
-export function addListing(data) {
+export function addListing(data, redirect) {
     return (dispatch) => {
         fetch('http://localhost:3000/listings', {
             headers: {
@@ -13,7 +13,8 @@ export function addListing(data) {
             if (listing.error) {
                 alert(listing.error)
             } else {
-                dispatch({type: 'ADD_LISTING', payload: listing})
+                dispatch({type: 'ADD_LISTING', payload: listing});
+                redirect()
             }
         })
     }

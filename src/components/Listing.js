@@ -5,8 +5,7 @@ import BookingsContainer from '../containers/BookingsContainer';
 const Listing = (props) => {
 
     let listing = props.listings[props.match.params.id - 1]
-    console.log('listing from listing component:', listing)
-    // let listing = props.listings.filter(listing => listing.id === props.match.params.id)[0]
+    // let listing = props.listings.find(listing => listing.id === props.match.params.id)
 
     return (
         <div className="listing">

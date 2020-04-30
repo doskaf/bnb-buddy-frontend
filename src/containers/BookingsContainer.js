@@ -8,7 +8,7 @@ class BookingsContainer extends Component {
         return (
             <div>
                 <BookingInput listing={this.props.listing} /><br />
-                {this.props.listing != null && <Bookings listingId={this.props.listing.id} />}
+                {this.props.listing != null && <Bookings listing={this.props.listing} />}
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {addListing} from '../actions/addListing';
+import { BrowserRouter} from 'react-router-dom';
 
 class ListingInput extends Component {
     state = {
@@ -19,7 +20,8 @@ class ListingInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        this.props.addListing(this.state)
+        let redirect = () => {this.props.history.push('/listings')}
+        this.props.addListing(this.state, redirect)
         this.setState({
             kind: 'Bedroom',
             bedrooms: '',
