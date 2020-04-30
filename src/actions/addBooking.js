@@ -16,6 +16,5 @@ export function addBooking(booking, listingId) {
                 dispatch({type: 'ADD_BOOKING', payload: booking})
             }
         })
-        // .then(resObj => console.log(resObj))
     }
 }

@@ -4,6 +4,6 @@ export function deleteBooking(bookingId, listingId) {
             method: 'DELETE'
         })
         .then(response => response.json())
-        .then(listing => dispatch({type: 'DELETE_BOOKING', payload: listing}))
+        .then(booking => dispatch({type: 'DELETE_BOOKING', payload: booking}))
     }
 }

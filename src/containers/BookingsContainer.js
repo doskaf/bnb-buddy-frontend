@@ -4,10 +4,11 @@ import Bookings from '../components/Bookings';
 
 class BookingsContainer extends Component {
     render() {
+        
         return (
             <div>
                 <BookingInput listing={this.props.listing} /><br />
-                <Bookings bookings={this.props.listing && this.props.listing.bookings} />
+                {this.props.listing != null && <Bookings listingId={this.props.listing.id} />}
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {addBooking} from '../actions/addBooking';
+import {incrementButton} from '../actions/incrementButton';
 
 class BookingInput extends Component {
     state = {
@@ -24,9 +25,11 @@ class BookingInput extends Component {
         }, this.props.listing.id);
         this.setState({
             guest: '',
-            check_in: '',
-            check_out: ''
+            checkIn: '',
+            checkOut: ''
         })
+        this.props.incrementButton();
+        // increase click count reducer
     }
 
     render() {
@@ -47,4 +50,4 @@ class BookingInput extends Component {
     }
 }
 
-export default connect(null, {addBooking})(BookingInput)
+export default connect(null, {addBooking, incrementButton})(BookingInput)
