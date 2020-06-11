@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Button from './Button';
 
 const Listings = (props) => {
 
@@ -17,7 +18,7 @@ const Listings = (props) => {
                 <ul>
                     {props.listings.map(listing => 
                         <li key={listing.id}>
-                            {renderLink(listing)}
+                            {renderLink(listing)} {/* <Button /> */}
                         </li>)}
                 </ul>
             }

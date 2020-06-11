@@ -19,5 +19,7 @@ And run
 
     $ npm start
 
+The application will be available [here](http://localhost:3001)
+
 Thank you for using Bnb Buddy!
 

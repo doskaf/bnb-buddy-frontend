@@ -1,0 +1,3 @@
+- Allow users to submit pictures of properties and display them in their show page.
+- Add user model for security.
+- Make booking functionality more realistic.
